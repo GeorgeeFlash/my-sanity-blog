@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '@/assets/studio_icon.jpg'
+import icon from '@/assets/studio_icon.jpg'
 
 const Logo = (props: any) => {
 
@@ -11,8 +11,8 @@ const Logo = (props: any) => {
             className="rounded-full object-cover"
             width={50}
             height={50}
-            src={logo}
-            alt="logo"
+            src={icon}
+            alt="icon"
         />
         {renderDefault(props)}
     </div>
