@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import { VisualEditing } from "next-sanity";
+import { draftMode } from "next/headers";
+
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 
@@ -16,9 +19,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <Banner />
-        {children}
+        {draftMode().isEnabled && (
+          <div className="">
+            <a href="/api/disable-draft" className="p-4 bg-blue-300 block">
+              Disable preview mode
+            </a>
+          </div>
+        )}
+        <main>
+          <Header />
+          <Banner />
+          {children}
+        </main>
+        {draftMode().isEnabled && <VisualEditing />}
       </body>
     </html>
   );
