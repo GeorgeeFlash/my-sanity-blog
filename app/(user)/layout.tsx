@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="max-w-7xl mx-auto">
         {draftMode().isEnabled && (
           <div className="">
             <a href="/api/disable-draft" className="p-4 bg-blue-300 block">
