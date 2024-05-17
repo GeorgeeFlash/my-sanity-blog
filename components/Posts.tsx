@@ -1,10 +1,9 @@
 import { urlForImage } from "@/sanity/lib/image";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import { SanityDocument } from "next-sanity";
+import { PostSanityDocument } from "@/typings";
 import Image from "next/image";
 import Link from "next/link";
 
-type PostSanityDocument = SanityDocument<Post>;
 
 export default function Posts({ posts }: { posts: PostSanityDocument[] }) {
   return (

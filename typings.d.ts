@@ -1,3 +1,5 @@
+import { SanityDocument } from "next-sanity";
+
 type Base = {
     _createdAt: string;
     _id: string;
@@ -68,3 +70,5 @@ interface Title {
     _type: "string";
     current: string;
 }
+
+export type PostSanityDocument = SanityDocument<Post>;
