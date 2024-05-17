@@ -4,7 +4,9 @@ import { SanityDocument } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Posts({ posts }: { posts: SanityDocument[] }) {
+type PostSanityDocument = SanityDocument<Post>;
+
+export default function Posts({ posts }: { posts: PostSanityDocument[] }) {
   return (
     // <main className="container mx-auto grid grid-cols-1 divide-y divide-blue-100">
     //   {posts?.length > 0 ? (
