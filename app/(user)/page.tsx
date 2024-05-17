@@ -1,4 +1,3 @@
-import { SanityDocument } from "next-sanity";
 import { PostSanityDocument } from "@/typings";
 
 import Posts from "@/components/Posts";

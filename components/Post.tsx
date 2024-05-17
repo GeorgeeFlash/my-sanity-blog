@@ -1,10 +1,10 @@
 import Image from "next/image"
 import { PortableText } from "@portabletext/react"
-import { SanityDocument } from "next-sanity"
+import { PostSanityDocument } from "@/typings";
 import { urlForImage } from "@/sanity/lib/image"
 import { RichTextComponents } from "./RichTextComponents"
 
-export default function Post({ post }: { post: SanityDocument }) {
+export default function Post({ post }: { post: PostSanityDocument }) {
   const { title, mainImage, body } = post
 
   return (

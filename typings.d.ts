@@ -10,7 +10,7 @@ type Base = {
 
 interface Post {
     author: Author;
-    // body: Block[];
+    body: Block[];
     categories: Category[];
     mainImage: MainImage;
     slug: Slug;
