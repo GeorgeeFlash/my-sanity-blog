@@ -12,6 +12,6 @@ export const client = createClient({
   perspective: "published",
   stega: {
     enabled: false,
-    studioUrl: "/studio",
+    studioUrl: process.env.SANITY_STUDIO_URL,
   },
 });

@@ -11,7 +11,6 @@ export default async function Home() {
 
   return (
     <div>
-      {/* Remember to download the sanity.io extension */}
       <Posts posts={posts} />
     </div>
   );

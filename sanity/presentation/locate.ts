@@ -22,7 +22,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
           locations: [
             {
               title: doc.title || "Untitled",
-              href: `/${doc.slug.current}`,
+              href: `post/${doc.slug.current}`,
             },
             {
               title: "Posts",

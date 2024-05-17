@@ -9,11 +9,12 @@ export const POSTS_QUERY = groq`
     } | order(_createdAt desc)
 `;
 
-export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]`;
-
-// 1:38:29
-// `*[_type == "post"] {
-//     ...,
-//     author ->,
-//     categories[] ->
-// } | order(_createdAt desc)`
+// export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]`;
+export const POST_QUERY = groq`
+    *[_type == "post" && slug.current == $slug][0]
+    {
+        ...,
+        author->,
+        categories[]->
+    }
+`;

@@ -32,7 +32,7 @@ export default defineConfig({
       locate,
       previewUrl: {
         draftMode: {
-          enable: '/api/draft',
+          enable: "/api/draft",
         },
       },
     }),
